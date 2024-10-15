@@ -23,15 +23,15 @@
             box-sizing: border-box;
         }
 
-        .container {
+      .container {
             position: relative;
             z-index: 1;
-            background-color: rgba(0, 0, 0, 0.7); 
+            background-color: rgba(0, 0, 0, 0.7);
             border-radius: 15px;
-            padding: 50px;
+            padding: 30px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-            max-width: 950px;
-            margin: 20px auto; 
+            max-width: 400px; /* Ajuste para evitar scroll horizontal */
+            width: 100%;
             text-align: center;
             overflow: hidden;
         }
@@ -163,6 +163,35 @@
                 toggleMusicButton.textContent = 'Silenciar música';
             }
         });
+    </script>
+     <!-- Temporizador -->
+        <div class="countdown">
+            Tiempo restante: <span id="countdown-timer"></span>
+        </div>
+
+        <a href="https://api.whatsapp.com/send/?phone=5215536773592&text=Hola,+Quiero+confirmar+la+asistencia+al+cumpleaños+de+Luciano.%0A%0AAdultos%3A+%0ANiños%3A+&type=phone_number&app_absent=0" class="button">Confirmar Asistencia</a>
+    </div>
+
+    <script>
+        // Función para actualizar el temporizador
+        function updateCountdown() {
+            const eventDate = new Date("November 22, 2024 15:00:00").getTime();
+            const now = new Date().getTime();
+            const timeLeft = eventDate - now;
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown-timer').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            // Actualiza el temporizador cada segundo
+            setTimeout(updateCountdown, 1000);
+        }
+
+        // Iniciar la cuenta regresiva al cargar la página
+        updateCountdown();
     </script>
 
 </body>
