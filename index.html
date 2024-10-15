@@ -23,7 +23,7 @@
             box-sizing: border-box;
         }
 
-      .container {
+        .container {
             position: relative;
             z-index: 1;
             background-color: rgba(0, 0, 0, 0.7);
@@ -35,16 +35,17 @@
             text-align: center;
             overflow: hidden;
         }
+
         .video-bg {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover; 
+            object-fit: cover;
             z-index: -1;
             border-radius: 15px;
-            opacity: 0.5; 
+            opacity: 0.5;
         }
 
         h1 {
@@ -85,6 +86,27 @@
             font-weight: bold;
         }
 
+        /* Color de la cuenta regresiva */
+        .countdown {
+            margin: 20px 0;
+            font-size: 1.2em;
+            color: #FFD700; /* Amarillo para la cuenta regresiva */
+        }
+
+        /* Botón para controlar la música */
+        .music-control {
+            margin-top: 20px;
+            display: inline-block;
+            background-color: #FFD700;
+            color: #333;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 20px;
@@ -105,19 +127,10 @@
             .button {
                 font-size: 1em;
             }
-        }
 
-        .music-control {
-            margin-top: 20px;
-            display: inline-block;
-            background-color: #FFD700;
-            color: #333;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 1.2em;
-            border-radius: 10px;
-            cursor: pointer;
+            .music-control {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
@@ -138,21 +151,17 @@
         <h2>al cumpleaños de Luciano</h2>
         <p>Ven a celebrar con nosotros el cumpleaños de <strong>Luciano</strong> que cumple 7 años.</p>
         <p><strong>Fecha:</strong> 22 de noviembre</p>
-         <div class="countdown">
+        <div class="countdown">
             Tiempo restante: <span id="countdown-timer"></span>
         </div>
         <p><strong>Horario:</strong> 15:00 a 20:30 hrs</p>
         <p><strong>Lugar:</strong> <a href="https://www.google.com/maps?q=Bt+kids+Atizapán" target="_blank" class="location-link">Bt kids Atizapán</a></p>
         <p>Confirma tu asistencia antes del <strong>10 de noviembre</strong> o la invitación será cancelada.</p>
         <a href="https://api.whatsapp.com/send/?phone=5215536773592&text=Hola,+Quiero+confirmar+la+asistencia+al+cumpleaños+de+Luciano.%0A%0AAdultos%3A+%0ANiños%3A+&type=phone_number&app_absent=0" class="button">Confirmar Asistencia</a>
-    </div>
-        <!-- Botón para activar el sonido -->
-        <div>
-            <button id="toggle-music" class="music-control">Activar sonido</button>
-        </div>
-    </div>
 
-    
+        <!-- Botón para activar el sonido dentro del contenedor -->
+        <button id="toggle-music" class="music-control">Activar sonido</button>
+    </div>
 
     <script>
         // Controlar la música con JavaScript
@@ -169,6 +178,7 @@
             }
         });
     </script>
+
     <script>
         // Función para actualizar el temporizador
         function updateCountdown() {
