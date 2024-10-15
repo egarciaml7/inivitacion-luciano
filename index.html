@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación Jurassic Park</title>
     <style>
+        /* Estilos para asegurar que el contenido se adapte a diferentes pantallas */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
         body {
             font-family: 'Arial', sans-serif;
             background-color: #333;
@@ -12,8 +21,9 @@
             text-align: center;
             padding: 50px;
             position: relative;
-            overflow: hidden;
+            box-sizing: border-box;
         }
+
         .container {
             position: relative;
             z-index: 1;
@@ -21,33 +31,41 @@
             border-radius: 15px;
             padding: 50px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-            max-width: 800px;
-            margin: auto;
+            max-width: 900px;
+            margin: 50px auto; /* Añadimos márgenes para centrar el contenido */
             text-align: center;
+            overflow: hidden;
         }
+
+        /* Ajustar el video para que cubra todo el área del contenedor sin deformarse */
         .video-bg {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover; /* Ajusta el video sin distorsionarlo */
             z-index: -1;
             border-radius: 15px;
             opacity: 0.5; /* Reduce la opacidad para que no tape el texto */
         }
+
+        /* Ajuste para el texto y botones */
         h1 {
             color: #FFD700;
             font-size: 3em;
             margin-bottom: 0;
         }
+
         h2 {
             font-size: 2em;
             color: #FFD700;
         }
+
         p {
             font-size: 1.2em;
         }
+
         .button {
             display: inline-block;
             background-color: #FF4500;
@@ -60,13 +78,38 @@
             margin-top: 20px;
             cursor: pointer;
         }
+
         .button:hover {
             background-color: #FF6347;
         }
+
         .location-link {
             color: #FFD700;
             text-decoration: none;
             font-weight: bold;
+        }
+
+        /* Aseguramos que el contenido sea adaptable a diferentes pantallas */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .button {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
@@ -79,13 +122,4 @@
         </video>
         <h1>¡Estás invitado!</h1>
         <h2>al cumpleaños de Luciano</h2>
-        <p>Ven a celebrar con nosotros el cumpleaños de <strong>Luciano</strong> que cumple 7 años.</p>
-        <p><strong>Fecha:</strong> 22 de noviembre</p>
-        <p><strong>Hora:</strong> 15:00 a 20:30 hrs</p>
-        <p><strong>Lugar:</strong> <a href="https://www.google.com/maps?q=Bt+kids+Atizapán" target="_blank" class="location-link">Bt kids Atizapán</a></p>
-        <p>Confirma tu asistencia antes del <strong>10 de noviembre</strong> o la invitación será cancelada.</p>
-        <a href="https://api.whatsapp.com/send/?phone=5215536773592&text=Hola,+Quiero+confirmar+la+asistencia+al+cumpleaños+de+Luciano.&type=phone_number&app_absent=0" class="button">Confirmar Asistencia</a>
-    </div>
-
-</body>
-</html>
+        <p>Ven a celebrar con nosotros el cumpleaños de <strong>Luciano</strong> que cumple​⬤
