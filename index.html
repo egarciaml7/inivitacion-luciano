@@ -23,15 +23,16 @@
             box-sizing: border-box;
         }
 
-       .container {
+        .container {
             position: relative;
             z-index: 1;
-            background-color: rgba(0, 0, 0, 0.7); 
+            background-color: rgba(0, 0, 0, 0.7);
             border-radius: 15px;
-            padding: 50px;
+            padding: 30px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-            max-width: 900px;
-            margin: 10px auto; 
+            max-width: 400px;
+            width: 100%;
+            margin: 50px auto;
             text-align: center;
             overflow: hidden;
         }
@@ -108,7 +109,17 @@
             align-items: center;
             margin-top: 20px;
             gap: 10px;
+
         }
+
+        /* Transparencia en botones */
+.button-confirmar {
+    background-color: rgba(40, 167, 69, 0.5); /* Verde con 80% de opacidad */
+}
+
+.button-cancelar {
+    background-color: rgba(220, 53, 69, 0.5); /* Rojo con 80% de opacidad */
+}
 
             /* Botón para controlar la música (icono) */
         .music-control {
@@ -154,9 +165,9 @@
 </head>
 <body>
 
-    <!-- Música de fondo que se reproduce automáticamente y en modo silencioso -->
-    <audio id="background-music" autoplay loop muted>
-        <source src="https://db-backup-erick.s3.us-east-2.amazonaws.com/Imagine%20Dragons%20-%20Believer.mp3?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJ3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMiJIMEYCIQCBZwLjGP8%2FdXEm2L%2FwVkxj2vg3476KdPXD66g%2BPien2QIhAPZGddlLeM%2FrrSJ9kM5hzQ78yLeBFz5ONrhwLCwZf%2FPSKu0CCPb%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQAhoMOTUyNzcxOTEyMjg1IgyyKS%2BdTv8HAvtTadcqwQIj5PMlbVmsynumsfx9a9JEZovTgf%2BhM5mzuOd6D73nlTEOuJFXkrQRKMZs8mRnmkxdNrv7RHDOpzafuTCsWOYPd0RgdGgbpTna9%2BmpgmkQbpa7vOFZCmQ4si5BALb6uUHcCco%2FvVWTo910734grDzwqLWuWvfOsM%2Bkf3PezN%2BN1asPWPB5gN5KIFpkdevjA4l9NkLRkq7VlbJYKbDgJDXiaKd6Xdhachi5egLqFNE2SS8xTC%2BS5LrNNFVOR8Dv2jX4Z71hbm32m%2F34nEHZzPpY1ejx9tlyjs%2B4XzpZxzwHVn116gGkqAfO74xLvDVJJ2MqNUHmK07TAv6dKLZTXmT%2Bjo4EBI5%2FGE7abJYIFDaAWZPujiheF3%2F6rz%2FOMJhdiV6ZHgV5PjbjKjCA0yR5RbHdNpUeJ5hibMf0yh%2FaqCSO4Cgw0be7uAY6sgK7EkFiPLTnVxHO6UTYyHbcSlaVCjLhbJP%2BSPcKuBC4lBzUAwbsFHJ20Frmw%2F0IiDWrK5TWMjIGhpZ1Ow7ww4StxEUxrlQlEivNk6xdo%2B4mM%2BQcJdRpbuUzxq4Tim7F1MfoRcOuAg8qly4YAtpkMOxnmg6kNFbxdFgNY0uBmqLJVbpAluUiOm4NKoP3%2B5LbvvWE6V2i1w7lsHpiokwGaBG0i8v60Vz7XOtgjOeSh9T7aaY%2BYJ8Qgj2gn83i9gtmw6hvK38aTwavDTy46uUtNvywbhP0PdMf49usJzUlt0pBw4xSNfyDFFB9hOaVZdPdcERhfDuUSxrvyICl3Hr7trXFcgdpE4uQT75AyQnqYxLQrviKYsaXV8EsYmhC8M2fCh6RaA5Ts%2Fgbm5aBoHxpuesM8Mw%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241015T214538Z&X-Amz-SignedHeaders=host&X-Amz-Expires=43200&X-Amz-Credential=ASIA53VNBUJOROQB7U6I%2F20241015%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Signature=3cd883deef25eb85b666bf6f014324cd5fc4dedec769840559a555a433c88f1f" type="audio/mpeg">
+
+    <audio id="background-music" autoplay muted>
+            <source src="https://db-backup-erick.s3.us-east-2.amazonaws.com/Imagine%20Dragons%20-%20Believer.mp3" type="audio/mpeg">
         Tu navegador no soporta la reproducción de audio.
     </audio>
 
@@ -167,7 +178,7 @@
         </video>
         <h1>¡Estás invitado!</h1>
         <p>Ven a celebrar con nosotros el cumpleaños número 7 de <strong>Luciano</strong>.</p>
-        <p><strong>Fecha:</strong>Viernes 22 de noviembre</p>
+        <p><strong>Fecha:</strong> El Viernes 22 de noviembre</p>
         <div class="countdown">
             Tiempo restante: <span id="countdown-timer"></span>
         </div>
@@ -177,7 +188,7 @@
 
         <!-- Contenedor para alinear los botones -->
         <div class="button-group">
-            <a href="https://api.whatsapp.com/send/?phone=5215536773592&text=Hola,+Quiero+confirmar+la+asistencia+al+cumpleaños+de+Luciano.%0A%0AAdultos%3A+%0ANiños%3A+&type=phone_number&app_absent=0" class="button-confirmar">Confirmar Asistencia</a>
+            <a href="https://api.whatsapp.com/send/?phone=5215536773592&text=Hola,%0AQuiero+confirmar+la+asistencia+al+cumplea%C3%B1os+de+Luciano.%0A%0A%C2%BFCu%C3%A1ntos%20adultos%20asistir%C3%A1n?%0A1%EF%B8%8F%E2%83%A3+1%0A2%EF%B8%8F%E2%83%A3+2%0A%C2%BFCu%C3%A1ntos%20ni%C3%B1os%20asistir%C3%A1n?%0A%0A&app_absent=0" class="button-confirmar">Confirmar Asistencia</a>
             <a href="https://api.whatsapp.com/send/?phone=5215536773592&text=Hola,+lamentablemente+no+podré+asistir+al+cumpleaños+de+Luciano.+Gracias+por+la+invitación.%0A%0A" class="button-cancelar">Cancelar Asistencia</a>
         </div>
 
@@ -188,10 +199,13 @@
     </div>
 
     <script>
-        // Controlar la música con JavaScript
+        // Quitar el loop de la música (ya no será necesario en el HTML)
         const music = document.getElementById('background-music');
-        const toggleMusicButton = document.getElementById('toggle-music');
-        const soundIcon = document.getElementById('sound-icon');
+        
+        // Detectar cuando termina la música y asegurarse de que no se vuelva a reproducir
+        music.addEventListener('ended', function() {
+            music.currentTime = 0; // Reiniciar a 0 si es necesario
+        }, false);
 
         // Cambiar entre silenciar y activar sonido
         toggleMusicButton.addEventListener('click', () => {
