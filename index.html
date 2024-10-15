@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación Jurassic Park</title>
     <style>
-        /* Estilos para asegurar que el contenido se adapte a diferentes pantallas */
         html, body {
             margin: 0;
             padding: 0;
@@ -27,30 +26,28 @@
         .container {
             position: relative;
             z-index: 1;
-            background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para que el texto sea legible */
+            background-color: rgba(0, 0, 0, 0.7); 
             border-radius: 15px;
             padding: 50px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
             max-width: 900px;
-            margin: 50px auto; /* Añadimos márgenes para centrar el contenido */
+            margin: 50px auto; 
             text-align: center;
             overflow: hidden;
         }
 
-        /* Ajustar el video para que cubra todo el área del contenedor sin deformarse */
         .video-bg {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ajusta el video sin distorsionarlo */
+            object-fit: cover; 
             z-index: -1;
             border-radius: 15px;
-            opacity: 0.5; /* Reduce la opacidad para que no tape el texto */
+            opacity: 0.5; 
         }
 
-        /* Ajuste para el texto y botones */
         h1 {
             color: #FFD700;
             font-size: 3em;
@@ -89,7 +86,6 @@
             font-weight: bold;
         }
 
-        /* Aseguramos que el contenido sea adaptable a diferentes pantallas */
         @media (max-width: 768px) {
             .container {
                 padding: 20px;
@@ -112,7 +108,6 @@
             }
         }
 
-        /* Botón para controlar la música */
         .music-control {
             margin-top: 20px;
             display: inline-block;
@@ -129,15 +124,15 @@
 </head>
 <body>
 
-    <!-- Música de fondo -->
-    <audio id="background-music" autoplay loop>
+    <!-- Música de fondo que se reproduce automáticamente y en modo silencioso -->
+    <audio id="background-music" autoplay loop muted>
         <source src="https://db-backup-erick.s3.us-east-2.amazonaws.com/Imagine%20Dragons%20-%20Believer.mp3?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJ3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMiJIMEYCIQCBZwLjGP8%2FdXEm2L%2FwVkxj2vg3476KdPXD66g%2BPien2QIhAPZGddlLeM%2FrrSJ9kM5hzQ78yLeBFz5ONrhwLCwZf%2FPSKu0CCPb%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQAhoMOTUyNzcxOTEyMjg1IgyyKS%2BdTv8HAvtTadcqwQIj5PMlbVmsynumsfx9a9JEZovTgf%2BhM5mzuOd6D73nlTEOuJFXkrQRKMZs8mRnmkxdNrv7RHDOpzafuTCsWOYPd0RgdGgbpTna9%2BmpgmkQbpa7vOFZCmQ4si5BALb6uUHcCco%2FvVWTo910734grDzwqLWuWvfOsM%2Bkf3PezN%2BN1asPWPB5gN5KIFpkdevjA4l9NkLRkq7VlbJYKbDgJDXiaKd6Xdhachi5egLqFNE2SS8xTC%2BS5LrNNFVOR8Dv2jX4Z71hbm32m%2F34nEHZzPpY1ejx9tlyjs%2B4XzpZxzwHVn116gGkqAfO74xLvDVJJ2MqNUHmK07TAv6dKLZTXmT%2Bjo4EBI5%2FGE7abJYIFDaAWZPujiheF3%2F6rz%2FOMJhdiV6ZHgV5PjbjKjCA0yR5RbHdNpUeJ5hibMf0yh%2FaqCSO4Cgw0be7uAY6sgK7EkFiPLTnVxHO6UTYyHbcSlaVCjLhbJP%2BSPcKuBC4lBzUAwbsFHJ20Frmw%2F0IiDWrK5TWMjIGhpZ1Ow7ww4StxEUxrlQlEivNk6xdo%2B4mM%2BQcJdRpbuUzxq4Tim7F1MfoRcOuAg8qly4YAtpkMOxnmg6kNFbxdFgNY0uBmqLJVbpAluUiOm4NKoP3%2B5LbvvWE6V2i1w7lsHpiokwGaBG0i8v60Vz7XOtgjOeSh9T7aaY%2BYJ8Qgj2gn83i9gtmw6hvK38aTwavDTy46uUtNvywbhP0PdMf49usJzUlt0pBw4xSNfyDFFB9hOaVZdPdcERhfDuUSxrvyICl3Hr7trXFcgdpE4uQT75AyQnqYxLQrviKYsaXV8EsYmhC8M2fCh6RaA5Ts%2Fgbm5aBoHxpuesM8Mw%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241015T214538Z&X-Amz-SignedHeaders=host&X-Amz-Expires=43200&X-Amz-Credential=ASIA53VNBUJOROQB7U6I%2F20241015%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Signature=3cd883deef25eb85b666bf6f014324cd5fc4dedec769840559a555a433c88f1f" type="audio/mpeg">
         Tu navegador no soporta la reproducción de audio.
     </audio>
 
     <div class="container">
         <video class="video-bg" autoplay muted loop playsinline>
-            <source src="https://db-backup-erick.s3.us-east-2.amazonaws.com/Grabacio%CC%81n%20de%20pantalla%202024-10-15%20a%20la%28s%29%2012.05.24%E2%80%AFp.m%20%28online-video-cutter.com%29%20%281%29.mp4" type="video/mp4">
+            <source src="https://db-backup-erick.s3.us-east-2.amazonaws.com/Grabacio%CC%81n%20de%20pantalla%202024-10-15%20a%20la%28s%29%2012.05.24%E2%80%AFp.m%20%28online-video-cutter.com%29%20%282%29.mp4?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJ3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMiJIMEYCIQCBZwLjGP8%2FdXEm2L%2FwVkxj2vg3476KdPXD66g%2BPien2QIhAPZGddlLeM%2FrrSJ9kM5hzQ78yLeBFz5ONrhwLCwZf%2FPSKu0CCPb%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQAhoMOTUyNzcxOTEyMjg1IgyyKS%2BdTv8HAvtTadcqwQIj5PMlbVmsynumsfx9a9JEZovTgf%2BhM5mzuOd6D73nlTEOuJFXkrQRKMZs8mRnmkxdNrv7RHDOpzafuTCsWOYPd0RgdGgbpTna9%2BmpgmkQbpa7vOFZCmQ4si5BALb6uUHcCco%2FvVWTo910734grDzwqLWuWvfOsM%2Bkf3PezN%2BN1asPWPB5gN5KIFpkdevjA4l9NkLRkq7VlbJYKbDgJDXiaKd6Xdhachi5egLqFNE2SS8xTC%2BS5LrNNFVOR8Dv2jX4Z71hbm32m%2F34nEHZzPpY1ejx9tlyjs%2B4XzpZxzwHVn116gGkqAfO74xLvDVJJ2MqNUHmK07TAv6dKLZTXmT%2Bjo4EBI5%2FGE7abJYIFDaAWZPujiheF3%2F6rz%2FOMJhdiV6ZHgV5PjbjKjCA0yR5RbHdNpUeJ5hibMf0yh%2FaqCSO4Cgw0be7uAY6sgK7EkFiPLTnVxHO6UTYyHbcSlaVCjLhbJP%2BSPcKuBC4lBzUAwbsFHJ20Frmw%2F0IiDWrK5TWMjIGhpZ1Ow7ww4StxEUxrlQlEivNk6xdo%2B4mM%2BQcJdRpbuUzxq4Tim7F1MfoRcOuAg8qly4YAtpkMOxnmg6kNFbxdFgNY0uBmqLJVbpAluUiOm4NKoP3%2B5LbvvWE6V2i1w7lsHpiokwGaBG0i8v60Vz7XOtgjOeSh9T7aaY%2BYJ8Qgj2gn83i9gtmw6hvK38aTwavDTy46uUtNvywbhP0PdMf49usJzUlt0pBw4xSNfyDFFB9hOaVZdPdcERhfDuUSxrvyICl3Hr7trXFcgdpE4uQT75AyQnqYxLQrviKYsaXV8EsYmhC8M2fCh6RaA5Ts%2Fgbm5aBoHxpuesM8Mw%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241015T213925Z&X-Amz-SignedHeaders=host&X-Amz-Expires=43200&X-Amz-Credential=ASIA53VNBUJOROQB7U6I%2F20241015%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Signature=2ecc1e31f89bdd489d9cec4ff9a6ee80a178ee72cada64f72639121276e80873" type="video/mp4">
             Tu navegador no soporta la reproducción de video.
         </video>
         <h1>¡Estás invitado!</h1>
@@ -147,10 +142,11 @@
         <p><strong>Hora:</strong> 15:00 a 20:30 hrs</p>
         <p><strong>Lugar:</strong> <a href="https://www.google.com/maps?q=Bt+kids+Atizapán" target="_blank" class="location-link">Bt kids Atizapán</a></p>
         <p>Confirma tu asistencia antes del <strong>10 de noviembre</strong> o la invitación será cancelada.</p>
-<a href="https://api.whatsapp.com/send/?phone=5215536773592&text=Hola,%0AQuiero+confirmar+la+asistencia+al+cumpleaños+de+Luciano.%0A%0AAdultos%3A+%0ANiños%3A+&type=phone_number&app_absent=0" class="button">Confirmar Asistencia</a>
-        <!-- Botón para pausar/reproducir música -->
+        <a href="https://api.whatsapp.com/send/?phone=5215536773592&text=Hola,%0AQuiero+confirmar+la+asistencia+al+cumpleaños+de+Luciano.%0A%0AAdultos%3A+%0ANiños%3A+&type=phone_number&app_absent=0" class="button">Confirmar Asistencia</a>
+
+        <!-- Botón para activar el sonido -->
         <div>
-            <button id="toggle-music" class="music-control">Pausar Música</button>
+            <button id="toggle-music" class="music-control">Activar sonido</button>
         </div>
     </div>
 
@@ -158,17 +154,15 @@
         // Controlar la música con JavaScript
         const music = document.getElementById('background-music');
         const toggleMusicButton = document.getElementById('toggle-music');
-        let isPlaying = true;
 
+        // Activar el sonido cuando el usuario haga clic en el botón
         toggleMusicButton.addEventListener('click', () => {
-            if (isPlaying) {
-                music.pause();
-                toggleMusicButton.textContent = 'Reproducir Música';
+            music.muted = !music.muted;
+            if (music.muted) {
+                toggleMusicButton.textContent = 'Activar sonido';
             } else {
-                music.play();
-                toggleMusicButton.textContent = 'Pausar Música';
+                toggleMusicButton.textContent = 'Silenciar música';
             }
-            isPlaying = !isPlaying;
         });
     </script>
 
